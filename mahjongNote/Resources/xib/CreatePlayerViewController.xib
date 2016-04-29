@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePlayerViewController">
+            <connections>
+                <outlet property="playerImageView" destination="fci-Gn-cBS" id="Qn4-Yp-BRQ"/>
+                <outlet property="playerNameTextField" destination="g3m-Iv-gRz" id="kd9-3T-kgi"/>
+                <outlet property="view" destination="iN0-l3-epB" id="A3p-pN-naB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="314"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popup9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dkw-Lw-dQF">
+                    <rect key="frame" x="0.0" y="0.0" width="267" height="314"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.29999999999999999" height="0.29999999999999999"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="template_pic2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fci-Gn-cBS">
+                    <rect key="frame" x="41" y="32" width="185" height="185"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZl-kl-BeR">
+                    <rect key="frame" x="195" y="252" width="46" height="30"/>
+                    <state key="normal" title="創建"/>
+                    <connections>
+                        <action selector="createPlayer:" destination="-1" eventType="touchUpInside" id="3Yr-Up-nN8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mud-6T-1KO" userLabel="ImageViewButton">
+                    <rect key="frame" x="41" y="32" width="185" height="185"/>
+                    <connections>
+                        <action selector="imageViewOnClick:" destination="-1" eventType="touchUpInside" id="KlS-8i-N0Z"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入你個名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-Iv-gRz">
+                    <rect key="frame" x="40" y="252" width="147" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="usl-6g-eUR"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="223.5" y="159"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="popup9.png" width="198" height="198"/>
+        <image name="template_pic2.jpg" width="200" height="200"/>
+    </resources>
+</document>

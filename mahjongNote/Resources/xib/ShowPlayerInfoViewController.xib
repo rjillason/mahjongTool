@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowPlayerInfoViewController">
+            <connections>
+                <outlet property="chartView" destination="xww-2B-Iyl" id="Ta7-nz-g7g"/>
+                <outlet property="nameLabel" destination="0e5-PO-Iex" id="RaT-q2-L7w"/>
+                <outlet property="profileImageView" destination="7gf-WO-Dnj" id="Cmb-X8-K1N"/>
+                <outlet property="view" destination="iN0-l3-epB" id="A3p-pN-naB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar autoresizesSubviews="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="eJX-hn-nTz">
+                    <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                    <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <items>
+                        <navigationItem title="戰蹟" id="vq2-SY-hHV">
+                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2ND-o9-mm0">
+                                <connections>
+                                    <action selector="cancelOnClick:" destination="-2" id="Dds-ft-Far"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iv3-Zi-kVj">
+                    <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1q-Rz-5t5" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xww-2B-Iyl" customClass="RadarChartView" customModule="mahjongNote" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="181" width="414" height="336"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="336" id="za5-qQ-ef9"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME_LABEL" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e5-PO-Iex">
+                                    <rect key="frame" x="202" y="34" width="153" height="59"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harry_potter.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-WO-Dnj">
+                                    <rect key="frame" x="39" y="34" width="128" height="128"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="Dpe-w3-uEm"/>
+                                        <constraint firstAttribute="width" constant="128" id="dMP-Es-HpP"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="xww-2B-Iyl" firstAttribute="width" secondItem="e1q-Rz-5t5" secondAttribute="width" id="4RY-ps-TcJ"/>
+                                <constraint firstItem="7gf-WO-Dnj" firstAttribute="centerX" secondItem="e1q-Rz-5t5" secondAttribute="centerX" id="6qC-cE-fNF"/>
+                                <constraint firstItem="xww-2B-Iyl" firstAttribute="leading" secondItem="e1q-Rz-5t5" secondAttribute="leading" id="Bui-XL-XD8"/>
+                                <constraint firstAttribute="height" constant="672" id="Mcm-vT-q3k"/>
+                                <constraint firstAttribute="trailing" secondItem="7gf-WO-Dnj" secondAttribute="trailing" constant="143" id="QiF-Wu-QAi"/>
+                                <constraint firstItem="xww-2B-Iyl" firstAttribute="top" secondItem="7gf-WO-Dnj" secondAttribute="bottom" constant="19" id="Vv3-jf-kaf"/>
+                                <constraint firstItem="7gf-WO-Dnj" firstAttribute="top" secondItem="e1q-Rz-5t5" secondAttribute="top" constant="34" id="WWV-1q-NjN"/>
+                                <constraint firstItem="7gf-WO-Dnj" firstAttribute="leading" secondItem="e1q-Rz-5t5" secondAttribute="leading" constant="39" id="XYa-By-8fJ"/>
+                                <constraint firstAttribute="trailing" secondItem="xww-2B-Iyl" secondAttribute="trailing" id="iik-Uc-mBq"/>
+                                <constraint firstItem="7gf-WO-Dnj" firstAttribute="leading" secondItem="e1q-Rz-5t5" secondAttribute="leading" constant="143" id="k7C-dN-tlv"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="6qC-cE-fNF"/>
+                                    <exclude reference="QiF-Wu-QAi"/>
+                                    <exclude reference="k7C-dN-tlv"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="e1q-Rz-5t5" secondAttribute="trailing" id="AsL-Yt-Fm3"/>
+                        <constraint firstAttribute="bottom" secondItem="e1q-Rz-5t5" secondAttribute="bottom" id="LhG-hn-Pgw"/>
+                        <constraint firstItem="e1q-Rz-5t5" firstAttribute="top" secondItem="iv3-Zi-kVj" secondAttribute="top" id="fYb-xZ-lu7"/>
+                        <constraint firstItem="e1q-Rz-5t5" firstAttribute="leading" secondItem="iv3-Zi-kVj" secondAttribute="leading" id="vQM-6k-OeT"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="e1q-Rz-5t5" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="2ra-ov-S4v"/>
+                <constraint firstItem="eJX-hn-nTz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Aln-ZT-ztc"/>
+                <constraint firstItem="e1q-Rz-5t5" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="EbH-Qf-ftm"/>
+                <constraint firstAttribute="bottom" secondItem="iv3-Zi-kVj" secondAttribute="bottom" id="Gzy-t9-oJv"/>
+                <constraint firstItem="iv3-Zi-kVj" firstAttribute="top" secondItem="eJX-hn-nTz" secondAttribute="bottom" id="IVn-Aa-IK8"/>
+                <constraint firstItem="eJX-hn-nTz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NAV-6x-ii1"/>
+                <constraint firstItem="iv3-Zi-kVj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hfd-4Q-FIP"/>
+                <constraint firstAttribute="trailing" secondItem="iv3-Zi-kVj" secondAttribute="trailing" id="jdw-3v-IgB"/>
+                <constraint firstAttribute="trailing" secondItem="eJX-hn-nTz" secondAttribute="trailing" id="xjh-KU-mne"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="EbH-Qf-ftm"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="223" y="159"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="harry_potter.jpg" width="1149" height="1600"/>
+    </resources>
+</document>
